@@ -96,7 +96,7 @@ class SendSMS {
 				return 0;
 
 			}
-/* if its ok, return 1 */
+			/* if its ok, return 1 */
 			return 1;
 
 
