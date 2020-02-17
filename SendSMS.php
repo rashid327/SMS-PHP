@@ -56,7 +56,7 @@ class SendSMS {
 			$ret = split(":",$result);
 			//echo $ret[0];
 
-/* if there's failure, return 0 */
+			/* if there's failure, return 0 */
 			if (strcmp(trim($ret[0]),"OK") !=0 ) {
 				return 0;
 
