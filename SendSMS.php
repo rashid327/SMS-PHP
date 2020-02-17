@@ -25,8 +25,6 @@
  *
  */
 
-
-
 class SendSMS {
 
 
