@@ -63,7 +63,7 @@ class SendSMS {
 			}
 
 
-/*if it's ok, then return 1 */
+			/*if it's ok, then return 1 */
 			$this->session_id = trim($ret[1]);
 
 			return 1;
