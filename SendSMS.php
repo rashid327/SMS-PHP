@@ -106,8 +106,6 @@ class SendSMS {
 	}
 
 
-
-
 }
 
 ?>
