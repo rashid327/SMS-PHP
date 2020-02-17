@@ -43,30 +43,30 @@ class SendSMS {
 
 
 	public function login () {
-			$ch = curl_init();
+		$ch = curl_init();
 
 
-			curl_setopt($ch, CURLOPT_URL,$this->api_url);
-			curl_setopt($ch, CURLOPT_POST, 3);
-			curl_setopt($ch, CURLOPT_POSTFIELDS,"user=" . $this->username . "&password=" . $this->password . "&api_id=" . $this->api);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER  ,1);
-			$result= curl_exec ($ch);
-			curl_close ($ch);
+		curl_setopt($ch, CURLOPT_URL,$this->api_url);
+		curl_setopt($ch, CURLOPT_POST, 3);
+		curl_setopt($ch, CURLOPT_POSTFIELDS,"user=" . $this->username . "&password=" . $this->password . "&api_id=" . $this->api);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER  ,1);
+		$result= curl_exec ($ch);
+		curl_close ($ch);
 
-			$ret = split(":",$result);
-			//echo $ret[0];
+		$ret = split(":",$result);
+		//echo $ret[0];
 
-			/* if there's failure, return 0 */
-			if (strcmp(trim($ret[0]),"OK") !=0 ) {
-				return 0;
+		/* if there's failure, return 0 */
+		if (strcmp(trim($ret[0]),"OK") !=0 ) {
+			return 0;
 
-			}
+		}
 
 
-			/*if it's ok, then return 1 */
-			$this->session_id = trim($ret[1]);
+		/*if it's ok, then return 1 */
+		$this->session_id = trim($ret[1]);
 
-			return 1;
+		return 1;
 
 
 	}
