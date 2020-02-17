@@ -1,7 +1,6 @@
 <?php
 require('SendSMS.php');
 
-
 $sendsms = new SendSMS("irfan6starz@gmail.com","fatima007","iPOpQbiUTD6Wlo4Yre57sg==");
 
 
