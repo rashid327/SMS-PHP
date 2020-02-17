@@ -74,30 +74,30 @@ class SendSMS {
 
 	public function send($number,$text){
 
-			$sendtext=urlencode($text);
-			$phone=urlencode($number);
+		$sendtext=urlencode($text);
+		$phone=urlencode($number);
 
-			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL,$this->send_url);
-			curl_setopt($ch, CURLOPT_POST, 3);
-			curl_setopt($ch, CURLOPT_POSTFIELDS,"session_id=" . $this->session_id . "&to=$phone&text=$sendtext");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER  ,1);
-			$result= curl_exec ($ch);
-			curl_close ($ch);
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL,$this->send_url);
+		curl_setopt($ch, CURLOPT_POST, 3);
+		curl_setopt($ch, CURLOPT_POSTFIELDS,"session_id=" . $this->session_id . "&to=$phone&text=$sendtext");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER  ,1);
+		$result= curl_exec ($ch);
+		curl_close ($ch);
 
-			/*
-			echo $result;
-			echo "<br /><br />" . $this->session_id;
-			*/
-			/* if there's failure, return 0 */
-			$ret = split(":",$result);
-			if (strcmp(trim($send[0]),"ID") !=0 )
-			{
-				return 0;
+		/*
+		echo $result;
+		echo "<br /><br />" . $this->session_id;
+		*/
+		/* if there's failure, return 0 */
+		$ret = split(":",$result);
+		if (strcmp(trim($send[0]),"ID") !=0 )
+		{
+			return 0;
 
-			}
-			/* if its ok, return 1 */
-			return 1;
+		}
+		/* if its ok, return 1 */
+		return 1;
 
 
 
