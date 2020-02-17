@@ -11,7 +11,7 @@ if  (  ($sendsms->login()) == 0  ) {
 
 /*other wise, you can send sms using the simple send() call*/
 
-$sendsms->send("+921234567","sufi please update me, when you receive any message?");
+$sendsms->send("+92123456789","sufi please update me, when you receive any message?");
 
 
 ?>
