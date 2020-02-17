@@ -100,7 +100,6 @@ class SendSMS {
 		return 1;
 
 
-
 	}
 
 
