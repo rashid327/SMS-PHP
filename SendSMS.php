@@ -29,7 +29,6 @@
 
 class SendSMS {
 
-
 	private $username,$password,$api;
 	protected $api_url = "http://api.clickatell.com/http/auth";
 	protected $send_url = "http://api.clickatell.com/http/sendmsg";
