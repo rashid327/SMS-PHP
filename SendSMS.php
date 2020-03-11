@@ -101,9 +101,7 @@ class SendSMS {
 		/* if its ok, return 1 */
 		return 1;
 
-
 	}
-
 
 }
 
