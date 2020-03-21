@@ -46,7 +46,6 @@ class SendSMS {
 	public function login () {
 		$ch = curl_init();
 
-
 		curl_setopt($ch, CURLOPT_URL,$this->api_url);
 		curl_setopt($ch, CURLOPT_POST, 3);
 		curl_setopt($ch, CURLOPT_POSTFIELDS,"user=" . $this->username . "&password=" . $this->password . "&api_id=" . $this->api);
@@ -92,6 +91,7 @@ class SendSMS {
 		if (strcmp(trim($send[0]),"ID") !=0 )
 		{
 			return 0;
+
 
 		}
 		/* if its ok, return 1 */
