@@ -83,13 +83,13 @@ class SendSMS {
 		echo $result;
 		echo "<br /><br />" . $this->session_id;
 		*/
+		
 		/* if there's failure, return 0 */
+		
 		$ret = split(":",$result);
 		if (strcmp(trim($send[0]),"ID") !=0 )
 		{
 			return 0;
-
-
 		}
 		/* if its ok, return 1 */
 		return 1;
