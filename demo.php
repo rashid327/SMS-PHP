@@ -4,6 +4,7 @@ require('SendSMS.php');
 $sendsms = new SendSMS("admin@gmail.com","*****","iPOpQbiUTD");
 
 /* if the login return 0, means that login failed, you cant send sms after this */
+
 if  (  ($sendsms->login()) == 0  ) {
 	die( "failed");
 }
